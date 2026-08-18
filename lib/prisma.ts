@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../app/generated/prisma";
 
 // Verhindert, dass im Development-Modus bei jedem Hot-Reload
 // eine neue Datenbankverbindung geöffnet wird.
