@@ -5,7 +5,7 @@ const Login = () => {
 		<form
 			action={async (formData) => {
 				"use server";
-				await signIn("credentials", { ...Object.fromEntries(formData), redirectTo: "/" });
+				await signIn("credentials", formData);
 			}}
 		>
 			<label>
