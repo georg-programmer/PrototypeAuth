@@ -1,7 +1,8 @@
+import { SignOut } from "../Auth/SignOut";
 
 const Home = () => {
   return (
-    <h1>asdf</h1>
+    <SignOut></SignOut>
   );
 };
 
