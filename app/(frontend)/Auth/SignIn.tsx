@@ -1,23 +1,20 @@
-import { signIn } from "@/auth"
- 
-export function SignIn() {
+import { auth } from "@/auth"
+import { SignOut } from "./SignOut";
+import { SignInForm } from "./SignInForm";
+
+export async function SignIn() {
+  const session = await auth();
+
+  if (session?.user) {
+    return (<>
+    <p>you are already logged in!</p>
+      <SignOut></SignOut>
+    </>
+    );
+  }
+
   return (
-    <form
-      action={async (formData) => {
-        "use server"
-        await signIn("credentials", formData)
-      }}
-    >
-      <label>
-        Email
-        <input name="email" type="email" />
-      </label>
-      <label>
-        Password
-        <input name="password" type="password" />
-      </label>
-      <button>Sign In</button>
-    </form>
+    <SignInForm />
   )
 }
 
