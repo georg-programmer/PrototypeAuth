@@ -9,7 +9,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     strategy: "jwt",
   },
   callbacks:{
-    authorized: async ( auth ) => { return !!auth}
+    authorized: async ({ auth }) => { return !!auth }
   },
 
   providers: [
