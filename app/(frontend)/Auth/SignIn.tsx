@@ -6,16 +6,16 @@ export async function SignIn() {
   const session = await auth();
 
   if (session?.user) {
-    return (<>
-    <p>you are already logged in!</p>
-      <SignOut></SignOut>
-    </>
+    return (
+      <>
+        <h1 className="text-2xl my-1 text-black">Already Logged In</h1>
+        <p className="text-sm text-gray-700 mb-0.5">You are already signed in.</p>
+        <SignOut />
+      </>
     );
   }
 
-  return (
-    <SignInForm />
-  )
+  return <SignInForm />;
 }
 
 export default SignIn;
