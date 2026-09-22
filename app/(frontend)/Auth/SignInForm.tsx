@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
+import Link from "next/link";
 import { signInAction, type SignInState } from "./signInAction";
 
 const initialState: SignInState = null;
@@ -27,7 +28,7 @@ export function SignInForm() {
         </button>
       </form>
       <p className="text-red-500 min-h-1 text-md">{state?.error}</p>
-      <a href="/">lander</a>
+      <Link href="/">lander</Link>
     </>
   );
 }
