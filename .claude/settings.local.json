@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/c/Users/georg/OneDrive - Bundeshandelsakademie und Bundeshandelsschule Bregenz/0. Matura_Projekt/Prototype/Prototype_Durchbruch/app/\\(frontend\\)\")",
+      "Bash(cd \"C:/Users/georg/OneDrive - Bundeshandelsakademie und Bundeshandelsschule Bregenz/0. Matura_Projekt/Prototype/auth-prototype\" && npx eslint . 2>&1)"
+    ]
+  }
+}
