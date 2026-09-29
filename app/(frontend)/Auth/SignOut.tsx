@@ -1,5 +1,6 @@
 import { signOut } from "@/auth"
 
+// Logout-Button: ruft serverseitig signOut auf und leitet zur Startseite weiter
 export function SignOut() {
   return (
     <form

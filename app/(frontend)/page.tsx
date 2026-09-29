@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { auth } from "@/auth";
 
+// Startseite: zeigt Login-Link und bei aktiver Session auch einen Home-Link
 const LandingPage = async () => {
   const session = await auth();
 

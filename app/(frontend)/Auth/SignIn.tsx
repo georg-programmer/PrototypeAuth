@@ -2,9 +2,12 @@ import { auth } from "@/auth"
 import { SignOut } from "./SignOut";
 import { SignInForm } from "./SignInForm";
 
+// Server-Komponente: zeigt Login-Formular oder "bereits eingeloggt"
 export async function SignIn() {
+  // Aktuelle Session vom Server abrufen
   const session = await auth();
 
+  // Wenn User schon eingeloggt ist → SignOut-Button anzeigen
   if (session?.user) {
     return (
       <>

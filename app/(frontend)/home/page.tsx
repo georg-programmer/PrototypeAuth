@@ -2,9 +2,11 @@ import { auth } from "@/auth";
 import { SignOut } from "../Auth/SignOut";
 import { redirect } from "next/navigation";
 
+// Geschützte Home-Seite: nur für eingeloggte User sichtbar
 const Home = async () => {
   const session = await auth();
 
+  // Nicht eingeloggt → zur Login-Seite weiterleiten
   if (!session?.user) {
     redirect("/login");
   }

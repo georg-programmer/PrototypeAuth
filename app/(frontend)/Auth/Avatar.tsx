@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { auth } from "@/auth"
 
+// Zeigt das Profilbild des eingeloggten Users (falls vorhanden)
 export default async function UserAvatar() {
   const session = await auth()
 
+  // Kein User eingeloggt → nichts rendern
   if (!session?.user) return null
 
   return (

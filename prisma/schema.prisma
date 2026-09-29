@@ -12,10 +12,11 @@ datasource db {
   provider = "postgresql"
 }
 
+// User-Tabelle: speichert Zugangsdaten und optionalen Namen
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String
-  name      String?
-  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())  // Eindeutige ID (CUID)
+  email     String   @unique               // Email als Login-Kennung
+  password  String                         // Gehashtes Passwort (bcrypt)
+  name      String?                        // Optionaler Anzeigename
+  createdAt DateTime @default(now())       // Erstellungszeitpunkt
 }

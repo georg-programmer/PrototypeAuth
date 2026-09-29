@@ -1,3 +1,4 @@
+// Client-Komponente: Login-Formular mit Email & Passwort
 "use client";
 
 import { useActionState } from "react";
@@ -7,6 +8,7 @@ import { signInAction, type SignInState } from "./signInAction";
 const initialState: SignInState = null;
 
 export function SignInForm() {
+  // useActionState verwaltet Formular-State, Action und Ladezustand
   const [state, formAction, pending] = useActionState(
     signInAction,
     initialState,
